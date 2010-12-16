@@ -87,8 +87,13 @@ def main():
     #graph = facebook.GraphAPI(token)
     graph = fb.graph
     print graph.get_object("me")['first_name']
-    print graph.get_object("754775853")
+    print graph.get_connections("me", "friends")
 
 
 if __name__ == '__main__':
     main()
+
+
+
+#https://graph.facebook.com/oauth/authorize?redirect_uri=http://www.facebook.com/connect/login_success.html&client_id=149502475102187&scope=offline_access,read_stream,user_location,friends_location,read_friendlists
+
